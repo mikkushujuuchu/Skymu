@@ -63,7 +63,7 @@
             <Setter Property="TextWrapping" Value="Wrap" />
         </Style>
 
-        <converters:ByteArrayToImageSourceConverter x:Key="ProfilePictureConverter" />
+        <converters:ByteArrayToImageSourceConverter x:Key="AvatarConverter" />
         <converters:MsgByteArrayToImageConverter x:Key="MsgByteArrayToImageConverter" />
         <converters:SenderToColorConverter x:Key="SenderToColorConverter" />
         <converters:NullDependentVisibilityConverter x:Key="NullDependentVisibilityConverter" />
@@ -370,7 +370,7 @@
                                     <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                         <Image.Source>
                                             <MultiBinding Converter="{StaticResource ByteArrayToImage}">
-                                                <Binding Path="Partner.ProfilePicture" />
+                                                <Binding Path="Partner.Avatar" />
                                                 <Binding Source="user" />
                                             </MultiBinding>
                                         </Image.Source>
@@ -416,7 +416,7 @@
                                     <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                         <Image.Source>
                                             <MultiBinding Converter="{StaticResource ByteArrayToImage}">
-                                                <Binding Path="ProfilePicture" />
+                                                <Binding Path="Avatar" />
                                                 <Binding Source="group" />
                                             </MultiBinding>
                                         </Image.Source>
@@ -462,7 +462,7 @@
                                         <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                             <Image.Source>
                                                 <MultiBinding Converter="{StaticResource ByteArrayToImage}">
-                                                    <Binding Path="Sender.ProfilePicture" />
+                                                    <Binding Path="Sender.Avatar" />
                                                     <Binding Source="user" />
                                                 </MultiBinding>
                                             </Image.Source>
@@ -620,7 +620,7 @@
                                     <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                         <Image.Source>
                                             <MultiBinding Converter="{StaticResource ByteArrayToImage}">
-                                                <Binding Path="ProfilePicture" />
+                                                <Binding Path="Avatar" />
                                                 <Binding Source="group" />
                                             </MultiBinding>
                                         </Image.Source>

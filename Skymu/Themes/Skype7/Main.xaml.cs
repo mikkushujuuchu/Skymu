@@ -74,9 +74,9 @@ namespace Skymu.Skype7
                 this.Title = Settings.BrandingName + "\u2122 - " + Universal.CurrentUser?.Username;
                 ConversationList.ItemsSource = vmodel.ConversationList;
                 GlobalUserCount.Text = string.Empty;
-                if (Universal.CurrentUser?.ProfilePicture?.Length > 0)
+                if (Universal.CurrentUser?.Avatar?.Length > 0)
                     UserPicture.Source = ImageHelper.GenerateFromArray(
-                        Universal.CurrentUser.ProfilePicture
+                        Universal.CurrentUser.Avatar
                     );
                 else
                     UserPicture.Source = Universal.AnonymousAvatar;
@@ -275,8 +275,8 @@ namespace Skymu.Skype7
             var conv = vmodel.SelectedConversation;
             LabelUsername1.Content = conv?.DisplayName;
             LabelStatus1.Text = (conv is DirectMessage dm) ? dm.Partner?.Status : null;
-            if (conv?.ProfilePicture?.Length > 0)
-                ChatHeaderAvatar.Source = ImageHelper.GenerateFromArray(conv.ProfilePicture);
+            if (conv?.Avatar?.Length > 0)
+                ChatHeaderAvatar.Source = ImageHelper.GenerateFromArray(conv.Avatar);
             else
                 ChatHeaderAvatar.Source =
                     (conv is Group) ? Universal.GroupAvatar : Universal.AnonymousAvatar;

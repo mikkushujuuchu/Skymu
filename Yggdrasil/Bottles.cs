@@ -44,11 +44,11 @@ namespace Yggdrasil.Bottles
             Message = message;
         }
 
-        public DialogBottle(DialogType type, string message, string copyToClipboardText)
+        public DialogBottle(DialogType type, string message, string copy_to_clipboard_text)
         {
             Type = type;
             Message = message;
-            CopyToClipboardText = copyToClipboardText;
+            CopyToClipboardText = copy_to_clipboard_text;
         }
 
         public DialogBottle(DialogType type, string message, Func<bool, object> action)

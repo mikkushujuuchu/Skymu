@@ -108,7 +108,7 @@ namespace Skymu
                 ?.GetAPI()
                 ?.FireShowingChanged(true);
             (_browser.ObjectForScripting as SkypeExternalObject)?.GetAPI()?.FireLiveChanged(true);
-            InjectAvatar(_user.Username, _user.ProfilePicture);
+            InjectAvatar(_user.Username, _user.Avatar);
 
             if (_contacts != null)
             {
@@ -116,7 +116,7 @@ namespace Skymu
                 _browser.Dispatcher.Invoke(() =>
                 {
                     foreach (var dm in contacts)
-                        InjectAvatar(dm.Partner.Username, dm.Partner.ProfilePicture);
+                        InjectAvatar(dm.Partner.Username, dm.Partner.Avatar);
                 });
             }
 
@@ -131,12 +131,12 @@ namespace Skymu
             //_browser.InvokeScript("eval", new object[] { "var c=document.getElementById('container');c.style.width='100%';c.style.paddingRight='0px';" });
         }
 
-        public static void FireMoodUpdate(string skypename, string moodText, byte[] profilePicture)
+        public static void FireMoodUpdate(string skypename, string moodText, byte[] avatar)
         {
             (_browser.ObjectForScripting as SkypeExternalObject)
                 ?.GetAPI()
                 ?.FireMoodUpdate(skypename, moodText);
-            InjectAvatar(skypename, profilePicture);
+            InjectAvatar(skypename, avatar);
         }
 
         private static void InjectAvatar(string username, byte[] picture)

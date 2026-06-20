@@ -52,7 +52,7 @@
             <Setter Property="Focusable" Value="True" />
             <Setter Property="TextWrapping" Value="Wrap" />
         </Style>
-        <converters:ByteArrayToImageSourceConverter x:Key="ProfilePictureConverter" />
+        <converters:ByteArrayToImageSourceConverter x:Key="AvatarConverter" />
         <converters:MsgByteArrayToImageConverter x:Key="MsgByteArrayToImageConverter" />
         <converters:SenderToColorConverter x:Key="SenderToColorConverter" />
         <converters:NullDependentVisibilityConverter x:Key="NullDependentVisibilityConverter" />
@@ -139,8 +139,8 @@
                         <Grid>
                             <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                 <Image.Source>
-                                    <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                        <Binding Path="ProfilePicture" />
+                                    <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                        <Binding Path="Avatar" />
                                         <Binding Source="user" />
                                     </MultiBinding>
                                 </Image.Source>
@@ -218,8 +218,8 @@
                         <Grid>
                             <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                 <Image.Source>
-                                    <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                        <Binding Path="ProfilePicture" />
+                                    <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                        <Binding Path="Avatar" />
                                         <Binding Source="group" />
                                     </MultiBinding>
                                 </Image.Source>
@@ -351,8 +351,8 @@
                         <Grid>
                             <Image RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill">
                                 <Image.Source>
-                                    <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                        <Binding Path="ProfilePicture" />
+                                    <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                        <Binding Path="Avatar" />
                                         <Binding Source="group" />
                                     </MultiBinding>
                                 </Image.Source>
@@ -1481,8 +1481,8 @@
                                                     RenderOptions.BitmapScalingMode="HighQuality"
                                                     Stretch="UniformToFill">
                                                     <Image.Source>
-                                                        <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                                            <Binding Path="ProfilePicture" />
+                                                        <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                                            <Binding Path="Avatar" />
                                                             <Binding Source="user" />
                                                         </MultiBinding>
                                                     </Image.Source>
@@ -1606,8 +1606,8 @@
                                                                 RenderOptions.BitmapScalingMode="HighQuality"
                                                                 Stretch="UniformToFill">
                                                                 <Image.Source>
-                                                                    <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                                                        <Binding Path="ProfilePicture" />
+                                                                    <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                                                        <Binding Path="Avatar" />
                                                                         <Binding Source="user" />
                                                                     </MultiBinding>
                                                                 </Image.Source>
@@ -1640,8 +1640,8 @@
                                                     RenderOptions.BitmapScalingMode="HighQuality"
                                                     Stretch="UniformToFill">
                                                     <Image.Source>
-                                                        <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                                            <Binding Path="ProfilePicture" />
+                                                        <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                                            <Binding Path="Avatar" />
                                                             <Binding Source="group" />
                                                         </MultiBinding>
                                                     </Image.Source>
@@ -1698,8 +1698,8 @@
                                                     RenderOptions.BitmapScalingMode="HighQuality"
                                                     Stretch="UniformToFill">
                                                     <Image.Source>
-                                                        <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                                            <Binding Path="ProfilePicture" />
+                                                        <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                                            <Binding Path="Avatar" />
                                                             <Binding Source="group" />
                                                         </MultiBinding>
                                                     </Image.Source>

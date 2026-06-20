@@ -65,7 +65,7 @@ namespace Skymu.Tests
             string display = "Alice",
             string status = null,
             byte[] avatar = null)
-            => new User(display, username, id, status, profilePicture: avatar);
+            => new User(display, username, id, status, avatar: avatar);
 
         public static DirectMessage DM(
             string convoId = "dm-alice",
@@ -305,8 +305,8 @@ namespace Skymu.Tests
             _fx.DB.Contacts.Write(new[] { dm });
 
             var read = _fx.DB.Contacts.Read("carol");
-            Assert.NotNull(read?.ProfilePicture);
-            Assert.Equal(avatar, read.ProfilePicture);
+            Assert.NotNull(read?.Avatar);
+            Assert.Equal(avatar, read.Avatar);
         }
 
         [Fact]

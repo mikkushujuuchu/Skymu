@@ -20,7 +20,7 @@ namespace Yggdrasil.Models
     public abstract class Metadata : INotifyPropertyChanged
     {
         private string _displayName;
-        private byte[] _profilePicture;
+        private byte[] _avatar;
 
         public string Identifier { get; set; }
 
@@ -30,17 +30,17 @@ namespace Yggdrasil.Models
             set => Set(ref _displayName, value, nameof(DisplayName));
         }
 
-        public byte[] ProfilePicture
+        public byte[] Avatar
         {
-            get => _profilePicture;
-            set => Set(ref _profilePicture, value, nameof(ProfilePicture));
+            get => _avatar;
+            set => Set(ref _avatar, value, nameof(Avatar));
         }
 
-        protected Metadata(string displayName, string identifier, byte[] profilePicture = null)
+        protected Metadata(string displayName, string identifier, byte[] avatar = null)
         {
             _displayName = displayName;
             Identifier = identifier;
-            _profilePicture = profilePicture;
+            _avatar = avatar;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -56,8 +56,8 @@ namespace Yggdrasil.Models
 
     public abstract class Participant : Metadata
     {
-        protected Participant(string displayName, string identifier, byte[] profilePicture = null)
-            : base(displayName, identifier, profilePicture) { }
+        protected Participant(string displayName, string identifier, byte[] avatar = null)
+            : base(displayName, identifier, avatar) { }
     }
 
     public class User : Participant
@@ -90,9 +90,9 @@ namespace Yggdrasil.Models
             string identifier,
             string status = null,
             PresenceStatus presence_status = PresenceStatus.Offline,
-            byte[] profilePicture = null
+            byte[] avatar = null
         )
-            : base(display_name, identifier, profilePicture)
+            : base(display_name, identifier, avatar)
         {
             _username = username;
             _status = status;
@@ -145,7 +145,7 @@ namespace Yggdrasil.Models
                 partner.DisplayName,
                 identifier,
                 unread_count,
-                partner.ProfilePicture,
+                partner.Avatar,
                 last_message_time
             )
         {

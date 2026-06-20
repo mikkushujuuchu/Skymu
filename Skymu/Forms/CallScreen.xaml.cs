@@ -62,14 +62,14 @@ namespace Skymu.Forms
         {
             InitializeComponent();
 
-            if (Universal.CurrentUser.ProfilePicture != null)
+            if (Universal.CurrentUser.Avatar != null)
                 MyAvatar.Source = ImageHelper.GenerateFromArray(
-                    Universal.CurrentUser.ProfilePicture
+                    Universal.CurrentUser.Avatar
                 );
             else
                 MyAvatar.Source = Universal.AnonymousAvatar;
-            if (partner.ProfilePicture != null)
-                PartnerAvatar.Source = ImageHelper.GenerateFromArray(partner.ProfilePicture);
+            if (partner.Avatar != null)
+                PartnerAvatar.Source = ImageHelper.GenerateFromArray(partner.Avatar);
             else
                 PartnerAvatar.Source = Universal.AnonymousAvatar;
 

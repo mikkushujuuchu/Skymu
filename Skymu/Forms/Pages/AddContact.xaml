@@ -31,7 +31,7 @@
         <Style TargetType="{x:Type GridViewColumnHeader}">
             <Setter Property="HorizontalContentAlignment" Value="Left" />
         </Style>
-        <converters:ByteArrayToImageSourceConverter x:Key="ProfilePictureConverter" />
+        <converters:ByteArrayToImageSourceConverter x:Key="AvatarConverter" />
         <converters:NullDependentVisibilityConverter x:Key="NullDependentVisibilityConverter" />
         <converters:SkyLangParseConverter x:Key="SkyLangParseConverter" />
         <converters:StatusToTextConverter x:Key="StatIntToText" />
@@ -342,8 +342,8 @@
                                 RenderOptions.BitmapScalingMode="HighQuality"
                                 Stretch="UniformToFill">
                                 <Image.Source>
-                                    <MultiBinding Converter="{StaticResource ProfilePictureConverter}">
-                                        <Binding Path="ProfilePicture" />
+                                    <MultiBinding Converter="{StaticResource AvatarConverter}">
+                                        <Binding Path="Avatar" />
                                         <Binding />
                                     </MultiBinding>
                                 </Image.Source>

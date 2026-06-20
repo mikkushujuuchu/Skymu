@@ -69,8 +69,8 @@ namespace Skymu.Credentials
             }
 
             string avatar =
-                cred.User?.ProfilePicture != null
-                    ? Convert.ToBase64String(cred.User.ProfilePicture)
+                cred.User?.Avatar != null
+                    ? Convert.ToBase64String(cred.User.Avatar)
                     : null;
 
             return new XElement(
@@ -81,14 +81,14 @@ namespace Skymu.Credentials
                 new XElement("DisplayName", cred.User?.DisplayName),
                 new XElement("PasswordOrToken", encryptedToken),
                 new XElement("AuthenticationType", cred.AuthenticationType.ToString()),
-                new XElement("ProfilePicture", avatar)
+                new XElement("Avatar", avatar)
             );
         }
 
         private static SavedCredential FromElement(XElement e)
         {
             byte[] avatar = null;
-            string picStr = (string)e.Element("ProfilePicture");
+            string picStr = (string)e.Element("Avatar");
             if (!string.IsNullOrEmpty(picStr))
             {
                 try

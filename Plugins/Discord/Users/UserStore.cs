@@ -24,10 +24,10 @@ namespace Discord.Users
         {
             var user = GetOrCreate(userId, displayName, username);
 
-            if (user.ProfilePicture == null && avatarHash != null)
+            if (user.Avatar == null && avatarHash != null)
             {
                 var avatar = await HelperMethods.GetCachedAvatarAsync(userId, avatarHash, HelperMethods.DiscordChannelType.DirectMessage);
-                if (avatar != null) user.ProfilePicture = avatar;
+                if (avatar != null) user.Avatar = avatar;
             }
 
             return user;

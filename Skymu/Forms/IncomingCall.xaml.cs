@@ -41,8 +41,8 @@ namespace Skymu.Forms
             };
             BeginAnimation(OpacityProperty, animation);
             SoundManager.PlayLoop("CALL_IN");
-            if (_call.Caller.ProfilePicture != null)
-                CallerAvatar.Source = ImageHelper.GenerateFromArray(_call.Caller.ProfilePicture);
+            if (_call.Caller.Avatar != null)
+                CallerAvatar.Source = ImageHelper.GenerateFromArray(_call.Caller.Avatar);
             else
                 CallerAvatar.Source = Universal.AnonymousAvatar;
             CallerName.Text = Universal.Lang.Format("sCALLNOTIF_TITLE", _call.Caller.DisplayName);

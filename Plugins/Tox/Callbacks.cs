@@ -164,7 +164,7 @@ namespace Tox
                 if (core.pfpSent.Contains(fid)) return;
                 core.pfpSent.Add(fid);
                 Debug.WriteLine($"Tox: Sending my PFP to {fid} as a {connection_status} connection was established");
-                byte[] pfp = core._currentUser.ProfilePicture;
+                byte[] pfp = core._currentUser.Avatar;
                 byte[] hash = new byte[tox_hash_length()];
                 tox_hash(hash, pfp, (UIntPtr)pfp.Length);
                 UInt32 trid = tox_file_send(tox, fid, Tox_File_Kind.AVATAR, (UInt64)pfp.Length, 0, Encoding.ASCII.GetString(hash), (UIntPtr)tox_hash_length(), out var _);
@@ -173,7 +173,7 @@ namespace Tox
                     core.transfers.Remove(trid);
                     core.transfer_info.Remove(trid);
                 }
-                core.transfers.Add(trid, core._currentUser.ProfilePicture);
+                core.transfers.Add(trid, core._currentUser.Avatar);
                 core.transfer_info.Add(trid, (Tox_File_Kind.AVATAR, ""));
                 if (core.pendingSendFriend.TryGetValue(fid, out var ls))
                 {
@@ -344,13 +344,13 @@ namespace Tox
                 var friend = core.friends[fid];
                 if (file_size == 0)
                 { // no pfp anymore (unoriginal af) 
-                    core.friends[fid].ProfilePicture = null;
+                    core.friends[fid].Avatar = null;
                     return;
                 }
-                else if (friend.ProfilePicture != null)
+                else if (friend.Avatar != null)
                 {
                     var hash = new byte[tox_hash_length()];
-                    tox_hash(hash, friend.ProfilePicture, (UIntPtr)friend.ProfilePicture.Length);
+                    tox_hash(hash, friend.Avatar, (UIntPtr)friend.Avatar.Length);
                     if (BATS(hash) == filename)
                     { // cache hit
                         tox_file_control(tox, fid, file_number, Tox_File_Control.CANCEL, out _);
@@ -406,7 +406,7 @@ namespace Tox
                     {
                         foreach (var f in core.friends)
                             if (f.Key == fid)
-                                f.Value.ProfilePicture = bdata;
+                                f.Value.Avatar = bdata;
                     });
                 }
                 core.transfers.Remove(file_number);

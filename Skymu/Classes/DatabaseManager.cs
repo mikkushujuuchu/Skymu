@@ -245,7 +245,7 @@ SanitizeFolderName(user.Identifier)
             if (avatar != null && avatar.Length > 0 && avatar[0] == 0x00)
                 avatar = avatar.Skip(1).ToArray();
             string status = reader.IsDBNull(offset + 4) ? null : reader.GetString(offset + 4);
-            return new User(displayName, username, identifier, status, profilePicture: avatar);
+            return new User(displayName, username, identifier, status, avatar: avatar);
         }
 
         private static User StubUser(string identifier)
@@ -1246,7 +1246,7 @@ SanitizeFolderName(user.Identifier)
                             cmd.Parameters.Add("@rich_mood_text", SqliteType.Text).Value =
                                 DBNull.Value;
                             cmd.Parameters.Add("@avatar_image", SqliteType.Blob).Value =
-                                (object)PrepareAvatarBytes(user.ProfilePicture) ?? DBNull.Value;
+                                (object)PrepareAvatarBytes(user.Avatar) ?? DBNull.Value;
                             cmd.Parameters.Add("@liveid_membername", SqliteType.Text).Value =
                                 (object)user.Username ?? DBNull.Value;
                             cmd.Parameters.Add("@availability", SqliteType.Integer).Value =
@@ -1400,7 +1400,7 @@ SanitizeFolderName(user.Identifier)
                                     (object)dm.Partner?.DisplayName ?? DBNull.Value;
                                 cmd.Parameters["@given_displayname"].Value = DBNull.Value; // TODO add nickname support
                                 cmd.Parameters["@avatar_image"].Value =
-                                    (object)PrepareAvatarBytes(dm.Partner?.ProfilePicture)
+                                    (object)PrepareAvatarBytes(dm.Partner?.Avatar)
                                     ?? DBNull.Value;
                                 cmd.Parameters["@mood_text"].Value =
                                     (object)dm.Partner?.Status ?? DBNull.Value;
