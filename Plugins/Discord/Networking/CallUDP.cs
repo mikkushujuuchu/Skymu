@@ -5,8 +5,10 @@
 // Modification or redistribution of this code is contingent
 // on your agreement to be bound by the terms of our license.
 // If you do not wish to abide by those terms, you may not
-// use, modify, or distribute any code from the Skymu project.
-// License: https://skymu.app/legal/license
+// modify or distribute any original code from the project.
+/*==========================================================*/
+// License: https://skymu.app/legal/AGPLv3
+// SPDX-License-Identifier: AGPL-3.0-or-later
 /*==========================================================*/
 
 using Concentus;
