@@ -397,7 +397,7 @@ namespace Skymu.Preferences
                 catch { }
 
                 System.Windows.MessageBox.Show(
-                    $"{Universal.NAME.ToLowerInvariant()} has discovered that your configuration file is corrupt or from an older version of the application. " +
+                    $"{Universal.NAME} has discovered that your configuration file is corrupt or from an older version of the application. " +
                     "It has been reset and your settings have been wiped.",
                     "Configuration file reset",
                     System.Windows.MessageBoxButton.OK,

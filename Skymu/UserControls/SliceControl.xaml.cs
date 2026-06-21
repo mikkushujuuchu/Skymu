@@ -1191,9 +1191,8 @@ namespace Skymu
                 MiddleSlice.Width = double.IsNaN(Width) ? bmp.PixelWidth : Width;
                 MiddleSlice.Height = GetElementHeight();
 
-                _middleBrush.ImageSource = Source;
-                _middleBrush.Viewbox = GetStateViewbox();
-                MiddleSlice.Fill = _middleBrush;
+                var zeroStateBox = GetStateViewbox();
+                ApplyBrush(_middleBrush, MiddleSlice, zeroStateBox.X, zeroStateBox.Y, zeroStateBox.Width, zeroStateBox.Height);
                 return;
             }
             else

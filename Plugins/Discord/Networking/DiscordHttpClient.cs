@@ -11,7 +11,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 /*==========================================================*/
 
-// Copied from Naticord which is found here: https://github.com/Naticord/naticord/blob/dev/Naticord/Networking/API.cs
+// Originally from Naticord which is found here: https://github.com/Naticord/naticord/blob/dev/Naticord/Networking/API.cs
 // This is done with permission from the original creator (patricktbp). Later modified by OmegaAOL.
 
 using Discord.Networking.Managers;

@@ -10,11 +10,6 @@
 // License: https://skymu.app/legal/AGPLv3
 // SPDX-License-Identifier: AGPL-3.0-or-later
 /*==========================================================*/
-// These dictionary mappings were generated using a large
-// language model. They may be incomplete or map to inaccurate
-// emoji. Please update this file if you find any such
-// inaccuracies or if there are missing mappings.
-/*==========================================================*/
 
 using System.Collections.Generic;
 

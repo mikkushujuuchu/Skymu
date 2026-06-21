@@ -10,12 +10,6 @@
 // License: https://skymu.app/legal/AGPLv3
 // SPDX-License-Identifier: AGPL-3.0-or-later
 /*==========================================================*/
-// Skymu plugin for Chat Completions, which is a protocol 
-// that supports turn-by-turn chatting streamed over HTTP.
-// Note that this is not an AI plugin, even though it can
-// be used with a myriad of AI services that happen to
-// support the Chat Completions protocol.
-/*==========================================================*/
 
 using System;
 using System.Collections.Generic;
@@ -30,6 +24,13 @@ using Yggdrasil.Enumerations;
 
 namespace Chaco
 {
+    /// <summary>
+    /// Skymu plugin for Chat Completions, which is a protocol 
+    /// that supports turn-by-turn chatting streamed over HTTP.
+    /// Note that this is not an AI plugin, even though it can
+    /// be used with a myriad of AI services that happen to
+    /// support the Chat Completions protocol.
+    /// </summary>
     public class Core : ICore
     {
         #region Tubes
