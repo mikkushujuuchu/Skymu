@@ -565,6 +565,11 @@ namespace Skymu.Skype7
         }
 
         #endregion
+
+        private void TextBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
     public class Skype7SidebarTemplateSelector : DataTemplateSelector

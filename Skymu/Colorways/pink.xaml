@@ -61,15 +61,24 @@
     <SolidColorBrush x:Key="Text.VeryLowContrast" Color="#FFFFFF" />
     <SolidColorBrush x:Key="Text.Hyperlink" Color="#CC0077" />
     <SolidColorBrush x:Key="Text.Highlight" Color="#FF44AA" />
-    <SolidColorBrush x:Key="Text.Header" Color="#EE0088" />
 
     <SolidColorBrush x:Key="Metro.Background" Color="#FFF5FA" />
     <SolidColorBrush x:Key="Metro.Border" Color="#F0D0E4" />
     <SolidColorBrush x:Key="Metro.Sidebar.UserCountTab" Color="#FAF0F6" />
     <SolidColorBrush x:Key="Accent" Color="#EE0088" />
 
-    <SolidColorBrush x:Key="Message.Bubble.Me" Color="#FDE8F4" />
-    <SolidColorBrush x:Key="Message.Bubble.Other" Color="#FCCFE8" />
+    <SolidColorBrush x:Key="Metro.Background.Tinted" Color="#FFFFF0F8" />
+    <SolidColorBrush x:Key="Metro.Separator" Color="#FFE8D9E4" />
+    <SolidColorBrush x:Key="Metro.Separator.Tinted" Color="#FFD8C8D4" />
+    <SolidColorBrush x:Key="Metro.Avatar.Background" Color="#FFEEAAD4" />
+    <SolidColorBrush x:Key="Metro.Text.VeryHighContrast" Color="#FF010101" />
+    <SolidColorBrush x:Key="Metro.Text.HighContrast" Color="#FF2B2030" />
+    <SolidColorBrush x:Key="Metro.Text.MediumContrast" Color="#FF6E5068" />
+    <SolidColorBrush x:Key="Metro.Text.LowContrast" Color="#FFA888A0" />
+    <SolidColorBrush x:Key="Metro.Text.Highlight" Color="#FF44AA" />
+
+    <SolidColorBrush x:Key="Metro.Bubble" Color="#FDE8F4" />
+    <SolidColorBrush x:Key="Metro.Bubble.Tinted" Color="#FCCFE8" />
     <SolidColorBrush x:Key="Message.Author.Me" Color="#999999" />
     <SolidColorBrush x:Key="Message.Author.Other" Color="#FF44AA" />
     <SolidColorBrush x:Key="Message.Author.Unread" Color="#FFCC11" />

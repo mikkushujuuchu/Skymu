@@ -115,7 +115,7 @@
                     FontFamily="Arial"
                     FontSize="20"
                     FontWeight="Bold"
-                    Foreground="{StaticResource Text.Header}"
+                    Foreground="{StaticResource Accent}"
                     Text="{Binding [sF_LOGIN_WELCOME]}" />
                 <Grid
                     x:Name="LoginControls"

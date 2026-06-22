@@ -68,7 +68,7 @@
                 <!--  This fixes the red hyperlink hover color  -->
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Foreground" Value="{StaticResource Text.Header}" />
+                        <Setter Property="Foreground" Value="{StaticResource Accent}" />
                     </Trigger>
                     <Trigger Property="IsMouseOver" Value="True">
                         <Setter Property="TextDecorations" Value="Underline" />

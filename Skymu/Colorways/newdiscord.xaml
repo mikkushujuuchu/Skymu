@@ -18,7 +18,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <sys:String x:Key="Colorway.Name">New Discord</sys:String>
-    <sys:String x:Key="Colorway.Author">OmegaAOL</sys:String>
+    <sys:String x:Key="Colorway.Author">Discord, OmegaAOL</sys:String>
     <sys:String x:Key="Colorway.Description">Dark colorway using Discord's current blurple colors.</sys:String>
     <sys:Int32 x:Key="Colorway.Version">1</sys:Int32>
     <sys:Boolean x:Key="Colorway.IsDarkTheme">true</sys:Boolean>
@@ -62,20 +62,30 @@
     <SolidColorBrush x:Key="Text.VeryLowContrast" Color="#FF383A40" />
     <SolidColorBrush x:Key="Text.Hyperlink" Color="#FF5865F2" />
     <SolidColorBrush x:Key="Text.Highlight" Color="#FF5865F2" />
-    <SolidColorBrush x:Key="Text.Header" Color="#FF5865F2" />
+
 
     <SolidColorBrush x:Key="Metro.Background" Color="#FF313338" />
     <SolidColorBrush x:Key="Metro.Border" Color="#FF1E1F22" />
     <SolidColorBrush x:Key="Metro.Sidebar.UserCountTab" Color="#FF2B2D31" />
     <SolidColorBrush x:Key="Accent" Color="#FF5865F2" />
 
-    <SolidColorBrush x:Key="Message.Bubble.Me" Color="#FF35373C" />
-    <SolidColorBrush x:Key="Message.Bubble.Other" Color="#FF383A40" />
+    <SolidColorBrush x:Key="Metro.Bubble" Color="#FF35373C" />
+    <SolidColorBrush x:Key="Metro.Bubble.Tinted" Color="#FF383A40" />
     <SolidColorBrush x:Key="Message.Author.Me" Color="#FFB5BAC1" />
     <SolidColorBrush x:Key="Message.Author.Other" Color="#FF5865F2" />
     <SolidColorBrush x:Key="Message.Author.Unread" Color="#FFFAA61A" />
     <SolidColorBrush x:Key="Message.Author.Forward" Color="#FF23A559" />
     <SolidColorBrush x:Key="Message.Border" Color="#FF1E1F22" />
+    <SolidColorBrush x:Key="Metro.Text.Highlight" Color="#FF5865F2" />
+
+    <SolidColorBrush x:Key="Metro.Background.Tinted" Color="#FF2C2F36" />
+    <SolidColorBrush x:Key="Metro.Separator" Color="#FF1E1F22" />
+    <SolidColorBrush x:Key="Metro.Separator.Tinted" Color="#FF26282C" />
+    <SolidColorBrush x:Key="Metro.Avatar.Background" Color="#FF5865F2" />
+    <SolidColorBrush x:Key="Metro.Text.VeryHighContrast" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="Metro.Text.HighContrast" Color="#FFF2F3F5" />
+    <SolidColorBrush x:Key="Metro.Text.MediumContrast" Color="#FFB5BAC1" />
+    <SolidColorBrush x:Key="Metro.Text.LowContrast" Color="#FF80848E" />
 
     <SolidColorBrush x:Key="Chatbar.Divider" Color="#FF1E1F22" />
     <SolidColorBrush x:Key="Sidebar.Header" Color="#FF232428" />

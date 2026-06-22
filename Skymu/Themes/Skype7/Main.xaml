@@ -1,4 +1,4 @@
-﻿<!-- 
+﻿<!--
     ============================================================
     Copyright © The Skymu Team and other contributors.
     For any inquiries or concerns, email contact@skymu.app.
@@ -39,7 +39,84 @@
 
     <Window.Resources>
 
-        <!--  skype early 7 default  -->
+        <!--  COLOR THEMES  -->
+        <!--  only do things here to test a theme in the designer  -->
+
+        <!--  vegas pro 13 / theme engine not developed enough, needs bevels to look better  -->
+        <!--<SolidColorBrush x:Key="SkBlue" Color="#5E66D3" />
+        <SolidColorBrush x:Key="SkCustomTint" Color="#778EAF" />
+        <SolidColorBrush x:Key="SkWashedBlue" Color="#AEB5E8" />
+        <SolidColorBrush x:Key="SkMidGray" Color="#26292B" />
+        <SolidColorBrush x:Key="SkLightGraySep" Color="#6F6F6F" />
+        <SolidColorBrush x:Key="SkLightGraySep2" Color="#6F6F6F" />
+        <SolidColorBrush x:Key="SkLight" Color="#7C7C7C" />
+        <SolidColorBrush x:Key="SkLight2" Color="#7C7C7C" />
+        <SolidColorBrush x:Key="SkWhite" Color="#888888" />
+        <SolidColorBrush x:Key="SkWhite2" Color="#888888" />
+        <SolidColorBrush x:Key="SkDarkBlue" Color="#595959" />
+        <SolidColorBrush x:Key="SkBlack" Color="#000" />
+        <SolidColorBrush x:Key="SkBlack2" Color="#000" />
+        <SolidColorBrush x:Key="SkBubble" Color="#7C7C7C" />
+        <SolidColorBrush x:Key="SkSteelBlue" Color="#26292B" />
+        <SolidColorBrush x:Key="SkBubbleLight" Color="#999999" />-->
+
+        <!--  discord 2016 dark mode WIP  -->
+        <!--<SolidColorBrush x:Key="SkBlue" Color="#7289DA" />
+        <SolidColorBrush x:Key="SkCustomTint" Color="#7289DA" />
+        <SolidColorBrush x:Key="SkWashedBlue" Color="#99AAB4" />
+        <SolidColorBrush x:Key="SkMidGray" Color="#8A8E94" />
+        <SolidColorBrush x:Key="SkLightGraySep" Color="#23252A" />
+        <SolidColorBrush x:Key="SkLightGraySep2" Color="#303337" />
+        <SolidColorBrush x:Key="SkLight" Color="#2E3136" />
+        <SolidColorBrush x:Key="SkLight2" Color="#282B30" />
+        <SolidColorBrush x:Key="SkWhite" Color="#36393E" />
+        <SolidColorBrush x:Key="SkWhite2" Color="#36393E" />
+        <SolidColorBrush x:Key="SkDarkBlue" Color="#0095CC" />
+        <SolidColorBrush x:Key="SkBlack" Color="#C3C4C5" />
+        <SolidColorBrush x:Key="SkBlack2" Color="#DCDDDE" />
+        <SolidColorBrush x:Key="SkBubble" Color="#08C7EDFC" />
+        <SolidColorBrush x:Key="SkBubbleLight" Color="#08E5F7FD" />
+        <SolidColorBrush x:Key="SkSteelBlue" Color="#9A9BA2" />-->
+
+        <!--  uwp skype dark mode WIP  -->
+        <!--<SolidColorBrush x:Key="SkBlue" Color="#00AFF0" />
+        <SolidColorBrush x:Key="SkCustomTint" Color="#18B6F1" />
+        <SolidColorBrush x:Key="SkWashedBlue" Color="#84D9F8" />
+        <SolidColorBrush x:Key="SkMidGray" Color="#899299" />
+        <SolidColorBrush x:Key="SkLightGraySep" Color="#00AFF0" />
+        <SolidColorBrush x:Key="SkLightGraySep2" Color="#002D3E" />
+        <SolidColorBrush x:Key="SkLight" Color="#021420" />
+        <SolidColorBrush x:Key="SkLight2" Color="#021420" />
+        <SolidColorBrush x:Key="SkWhite" Color="#000000" />
+        <SolidColorBrush x:Key="SkWhite2" Color="#021728" />
+        <SolidColorBrush x:Key="SkDarkBlue" Color="#00AFF0" />
+        <SolidColorBrush x:Key="SkBlack" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="SkBlack2" Color="#fff" />
+        <SolidColorBrush x:Key="SkBubble" Color="#2C2B31" />
+        <SolidColorBrush x:Key="SkBubbleLight" Color="#021420" />
+        <SolidColorBrush x:Key="SkSteelBlue" Color="#899299" />-->
+
+        <!--  telegram dark mode  -->
+        <!--<SolidColorBrush x:Key="SkBlue" Color="#6C7883" />
+        <SolidColorBrush x:Key="SkCustomTint" Color="#6C7883" />
+        <SolidColorBrush x:Key="SkWashedBlue" Color="#5BAEF9" />
+        <SolidColorBrush x:Key="SkMidGray" Color="#3FFFFFFF" />
+        <SolidColorBrush x:Key="SkLightGraySep" Color="#101921" />
+        <SolidColorBrush x:Key="SkLightGraySep2" Color="#0A121B" />
+        <SolidColorBrush x:Key="SkLight" Color="#17212B" />
+        <SolidColorBrush x:Key="SkLight2" Color="#17212B" />
+        <SolidColorBrush x:Key="SkWhite" Color="#0E1621" />
+        <SolidColorBrush x:Key="SkWhite2" Color="#17212B" />
+        <SolidColorBrush x:Key="SkDarkBlue" Color="#0095CC" />
+        <SolidColorBrush x:Key="SkBlack" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="SkBlack2" Color="#F5F5F5" />
+        <SolidColorBrush x:Key="SkBubble" Color="#182533" />
+        <SolidColorBrush x:Key="SkSteelBlue" Color="#3FFFFFFF" />
+        <SolidColorBrush x:Key="SkBubbleLight" Color="#2B5278" />-->
+
+        <!--  skype late-2015 default  -->
+        <!--<SolidColorBrush x:Key="SkBlue" Color="#00AFF0" />
+        <SolidColorBrush x:Key="SkCustomTint" Color="#00AFF0" />
         <SolidColorBrush x:Key="SkWashedBlue" Color="#ABD4E3" />
         <SolidColorBrush x:Key="SkMidGray" Color="#6E6E73" />
         <SolidColorBrush x:Key="SkLightGraySep" Color="#D3E6EA" />
@@ -53,7 +130,25 @@
         <SolidColorBrush x:Key="SkBlack2" Color="#2B2B30" />
         <SolidColorBrush x:Key="SkBubble" Color="#C7EDFC" />
         <SolidColorBrush x:Key="SkSteelBlue" Color="#A0B7C8" />
-        <SolidColorBrush x:Key="SkBubbleLight" Color="#E5F7FD" />
+        <SolidColorBrush x:Key="SkBubbleLight" Color="#E5F7FD" />-->
+
+        <!--  mapped to Skymu's standard theme format  -->
+        <SolidColorBrush x:Key="SkBlue" Color="{Binding Color, Source={StaticResource Accent}}" />
+        <SolidColorBrush x:Key="SkCustomTint" Color="{Binding Color, Source={StaticResource Accent}}" />
+        <SolidColorBrush x:Key="SkWashedBlue" Color="{Binding Color, Source={StaticResource Metro.Avatar.Background}}" />
+        <SolidColorBrush x:Key="SkMidGray" Color="{Binding Color, Source={StaticResource Metro.Text.MediumContrast}}" />
+        <SolidColorBrush x:Key="SkLightGraySep" Color="{Binding Color, Source={StaticResource Metro.Separator.Tinted}}" />
+        <SolidColorBrush x:Key="SkLightGraySep2" Color="{Binding Color, Source={StaticResource Metro.Separator}}" />
+        <SolidColorBrush x:Key="SkLight" Color="{Binding Color, Source={StaticResource Metro.Background.Tinted}}" />
+        <SolidColorBrush x:Key="SkLight2" Color="{Binding Color, Source={StaticResource Metro.Background.Tinted}}" />
+        <SolidColorBrush x:Key="SkWhite" Color="{Binding Color, Source={StaticResource Card.Background}}" />
+        <SolidColorBrush x:Key="SkWhite2" Color="{Binding Color, Source={StaticResource Metro.Background}}" />
+        <SolidColorBrush x:Key="SkDarkBlue" Color="{Binding Color, Source={StaticResource Accent}}" />
+        <SolidColorBrush x:Key="SkBlack" Color="{Binding Color, Source={StaticResource Metro.Text.HighContrast}}" />
+        <SolidColorBrush x:Key="SkBlack2" Color="{Binding Color, Source={StaticResource Metro.Text.VeryHighContrast}}" />
+        <SolidColorBrush x:Key="SkSteelBlue" Color="{Binding Color, Source={StaticResource Metro.Text.LowContrast}}" />
+        <SolidColorBrush x:Key="SkBubble" Color="{Binding Color, Source={StaticResource Metro.Bubble.Tinted}}" />
+        <SolidColorBrush x:Key="SkBubbleLight" Color="{Binding Color, Source={StaticResource Metro.Bubble}}" />
 
         <Style x:Key="TextBlockViewerStyle" TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Left" />
@@ -825,11 +920,9 @@
                         FontFamily="Segoe UI Historic"
                         FontSize="13"
                         Foreground="{DynamicResource SkMidGray}"
-                        Text="Search">
+                        Text="{Binding Source={StaticResource Lang}, Path=[sADD_CONTACT_PANEL_SEARCH_HINT], Mode=OneWay}"
+                        TextChanged="TextBoxSearch_TextChanged">
                         <!--  TODO: Use LANG for above  -->
-                        <TextBox.LayoutTransform>
-                            <ScaleTransform ScaleX="1.02" />
-                        </TextBox.LayoutTransform>
                     </TextBox>
                     <Image
                         Width="12"
@@ -1079,9 +1172,9 @@
                         HoverIndex="1"
                         PressedIndex="2"
                         SliceMode="0"
-                        Themeable="True"
                         Source="Assets/Themeable/Main/network-none.png"
-                        StackDirection="Vertical" />
+                        StackDirection="Vertical"
+                        Themeable="True" />
                     <!--  Video call button  -->
                     <!--  TODO change to SliceControl "{Binding VideoCallCommand}"  -->
                     <Ellipse
@@ -1166,6 +1259,7 @@
             <ScrollViewer
                 x:Name="MessageScrollFeed"
                 Margin="0,101,0,130"
+                Background="{StaticResource SkWhite}"
                 Loaded="MessageScrollFeed_Loaded">
                 <ItemsControl
                     x:Name="ConversationItemsList"

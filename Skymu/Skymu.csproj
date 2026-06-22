@@ -175,6 +175,9 @@
 	  <None Remove="Themes\Skype7\Assets\Universal\Icon\plus.png" />
 	  <None Remove="Themes\Skype7\Assets\Universal\Icon\warning.png" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Page Remove="Colorways\uwpdark.xaml" />
+	</ItemGroup>
 
 	<!-- Packages -->
 	<ItemGroup>
@@ -253,6 +256,10 @@
 		<None Include="Colorways\default.xaml">
 			<Generator>MSBuild:Compile</Generator>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="Colorways\uwpdark.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
 

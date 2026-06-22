@@ -138,13 +138,13 @@ namespace Skymu.Skype7
                 ) || (!PasswordTokenBox.IsEnabled && !UsernameBox.IsEnabled)
             )
             {
-                if (!LoginButton.IsEnabled) { LoginButtonLabel.Opacity = 1; LoginButton.Background.Opacity = 1; }
+                if (!LoginButton.IsEnabled) { LoginButtonLabel.Opacity = 1; LoginButton.Opacity = 1; }
                 LoginButton.IsEnabled = true;
             }
             else
             {
                 LoginButton.IsEnabled = false;
-                LoginButton.Background.Opacity = 0.4;
+                LoginButton.Opacity = 0.4;
                 LoginButtonLabel.Opacity = 0.4;
             }
         }
@@ -236,7 +236,7 @@ namespace Skymu.Skype7
             {
                 ControlsGrid.Visibility = Visibility.Visible;
                 Spinner.Visibility = Visibility.Collapsed;
-                Header.Content = "Sign in";
+                Header.Content = Universal.Lang["sZAPBUTTON_SIGNIN"];
             }
         }
 
