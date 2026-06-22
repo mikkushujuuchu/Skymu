@@ -282,7 +282,7 @@ namespace Skymu.Skype7
             else
                 ChatHeaderAvatar.Source =
                     (conv is Group) ? Universal.GroupAvatar : Universal.AnonymousAvatar;
-            throbber.Visibility = Visibility.Visible;
+            Spinner.Visibility = Visibility.Visible;
 
             await vmodel.SetConversation();
 
@@ -291,7 +291,7 @@ namespace Skymu.Skype7
 
             _grouper.Build(vmodel.SelectedConversation);
             ConversationItemsList.ItemsSource = _grouper.Grouped;
-            throbber.Visibility = Visibility.Collapsed;
+            Spinner.Visibility = Visibility.Collapsed;
             _conversationScrollViewer?.ScrollToEnd();
         }
 

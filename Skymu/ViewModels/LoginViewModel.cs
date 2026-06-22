@@ -10,11 +10,6 @@
 // License: https://skymu.app/legal/license
 // SPDX-License-Identifier: AGPL-3.0-or-later
 /*==========================================================*/
-// This code is EXPIREMENTAL and has not been reviewed by
-// OmegaAOL, patricktbp, or HUBAXE.
-// It is a port of logic that previously lived in Login.xaml.cs.
-// Please do not judge us on it.
-/*==========================================================*/
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Linq;

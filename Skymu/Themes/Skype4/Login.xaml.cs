@@ -40,8 +40,8 @@ namespace Skymu.Skype4
         {
             this.switchuser = switchuser;
             InitializeComponent();
-            usernameBox.KeyUp += BoxKeyUp;
-            passwordTokenBox.KeyUp += BoxKeyUp;
+            UsernameBox.KeyUp += BoxKeyUp;
+            PasswordTokenBox.KeyUp += BoxKeyUp;
             LoginButton.MouseLeftButtonUp += buttonLaunch;
             this.ContentRendered += Login_ContentRendered;
 
@@ -57,30 +57,30 @@ namespace Skymu.Skype4
 
         private async void buttonLaunch(object state, RoutedEventArgs e)
         {
-            if (comboProtocolBox.SelectedIndex == -1) return;
+            if (ProtocolComboBox.SelectedIndex == -1) return;
             await _viewModel.Login(
-                usernameBox.Text,
-                passwordTokenBox.Password
+                UsernameBox.Text,
+                PasswordTokenBox.Password
             );
         }
 
         private void OnPluginSelectionUpdated(LoginViewModel.PluginListing listing)
         {
             Password.Foreground = new SolidColorBrush(Colors.Black);
-            passwordTokenBox.IsEnabled = true;
+            PasswordTokenBox.IsEnabled = true;
             Password.FontStyle = FontStyles.Normal;
             Password.Text = listing.TextPassword ?? Universal.Lang["sF_USERENTRY_LABEL_PASSWORD"];
             LoginButton.Text = Universal.Lang["sZAPBUTTON_SIGNIN"];
 
             SkypeName.Foreground = new SolidColorBrush(Colors.Black);
-            usernameBox.IsEnabled = true;
+            UsernameBox.IsEnabled = true;
             SkypeName.FontStyle = FontStyles.Normal;
             SkypeName.Text = listing.TextUsername ?? SkypeName.Text;
 
             if (listing.AuthenticationType != AuthenticationMethod.Password)
             {
                 Password.Foreground = new SolidColorBrush(Colors.DarkGray);
-                passwordTokenBox.IsEnabled = false;
+                PasswordTokenBox.IsEnabled = false;
                 Password.Text = "field not required";
                 Password.FontStyle = FontStyles.Italic;
 
@@ -89,7 +89,7 @@ namespace Skymu.Skype4
                     case AuthenticationMethod.QRCode:
                         LoginButton.Text = "Scan QR code";
                         SkypeName.Foreground = new SolidColorBrush(Colors.DarkGray);
-                        usernameBox.IsEnabled = false;
+                        UsernameBox.IsEnabled = false;
                         SkypeName.FontStyle = FontStyles.Italic;
                         SkypeName.Text = "field not required";
                         break;
@@ -123,9 +123,9 @@ namespace Skymu.Skype4
         private void CheckEnableLoginButton()
         {
             if (
-                (usernameBox.Text.Trim() != string.Empty
-                    && (passwordTokenBox.Password.Trim() != string.Empty || !passwordTokenBox.IsEnabled))
-                || !passwordTokenBox.IsEnabled && !usernameBox.IsEnabled
+                (UsernameBox.Text.Trim() != string.Empty
+                    && (PasswordTokenBox.Password.Trim() != string.Empty || !PasswordTokenBox.IsEnabled))
+                || !PasswordTokenBox.IsEnabled && !UsernameBox.IsEnabled
             )
             {
                 LoginButton.IsEnabled = true;
@@ -179,12 +179,12 @@ namespace Skymu.Skype4
                 MI(L("sMAINMENU_HELP_ABOUT"), OnAbout)
             );
 
-            comboProtocolBox.DisplayMemberPath = "DisplayName";
-            comboProtocolBox.SelectedValuePath = "DisplayName";
+            ProtocolComboBox.DisplayMemberPath = "DisplayName";
+            ProtocolComboBox.SelectedValuePath = "DisplayName";
             _viewModel.LoadPlugins();
 
             foreach (var item in _viewModel.PluginItems)
-                comboProtocolBox.Items.Add(item);
+                ProtocolComboBox.Items.Add(item);
 
             if (_viewModel.PendingAutoLogin != null && !switchuser)
                 LoginToggleAnimation(true);
@@ -196,7 +196,7 @@ namespace Skymu.Skype4
                 var pal = _viewModel.PendingAutoLoginListing;
                 var pa = _viewModel.PendingAutoLogin;
                 _viewModel.ClearPendingAutoLogin();
-                comboProtocolBox.SelectedItem = pal;
+                ProtocolComboBox.SelectedItem = pal;
                 ProtocolSelectionChanged(null, null);
                 SetProtocolSelection(pal, pa);
             }
@@ -206,9 +206,9 @@ namespace Skymu.Skype4
         {
             var preferred = _viewModel.GetPreferredDefaultListing();
             if (preferred != null)
-                comboProtocolBox.SelectedItem = preferred;
+                ProtocolComboBox.SelectedItem = preferred;
             else
-                comboProtocolBox.SelectedIndex = 0;
+                ProtocolComboBox.SelectedIndex = 0;
         }
 
         private void SetProtocolSelection(LoginViewModel.PluginListing listing, SavedCredential creds)
@@ -218,18 +218,18 @@ namespace Skymu.Skype4
             if (creds.AuthenticationType == AuthenticationMethod.QRCode) return;
             if (creds.AuthenticationType == AuthenticationMethod.Token)
             {
-                usernameBox.Text = !String.IsNullOrEmpty(creds.PasswordOrToken) ? creds.PasswordOrToken : creds.User.Username;
+                UsernameBox.Text = !String.IsNullOrEmpty(creds.PasswordOrToken) ? creds.PasswordOrToken : creds.User.Username;
                 CheckEnableLoginButton();
                 return;
             }
-            usernameBox.Text = creds.User.Username;
-            passwordTokenBox.Password = creds.PasswordOrToken;
+            UsernameBox.Text = creds.User.Username;
+            PasswordTokenBox.Password = creds.PasswordOrToken;
             CheckEnableLoginButton();
         }
 
         private void ProtocolSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var listing = (LoginViewModel.PluginListing)comboProtocolBox.SelectedItem;
+            var listing = (LoginViewModel.PluginListing)ProtocolComboBox.SelectedItem;
             foreach (var cred in _viewModel.SavedCredentials)
             {
                 if (cred.Plugin.ToLowerInvariant() == listing.InternalName.ToLowerInvariant())
@@ -245,7 +245,7 @@ namespace Skymu.Skype4
         {
             if (!switchuser)
                 await _viewModel.TryAutoLogin();
-            if (_viewModel.PendingAutoLogin != null && comboProtocolBox.SelectedIndex == -1)
+            if (_viewModel.PendingAutoLogin != null && ProtocolComboBox.SelectedIndex == -1)
                 SelectDefaultProtocol();
         }
 
@@ -254,13 +254,13 @@ namespace Skymu.Skype4
             if (anim)
             {
                 LoginControls.Visibility = Visibility.Collapsed;
-                throbber.Visibility = Visibility.Visible;
+                Spinner.Visibility = Visibility.Visible;
                 header.Text = Universal.Lang["sSTATUSTEXT_PROFILE_LOGGING_IN"];
             }
             else
             {
                 LoginControls.Visibility = Visibility.Visible;
-                throbber.Visibility = Visibility.Collapsed;
+                Spinner.Visibility = Visibility.Collapsed;
                 header.Text = Universal.Lang["sF_LOGIN_WELCOME"];
             }
         }

@@ -1852,7 +1852,7 @@
                                         Height="1"
                                         Fill="{StaticResource Chatbar.Divider}" />
                                     <Image
-                                        x:Name="throbber"
+                                        x:Name="Spinner"
                                         Grid.Row="3"
                                         Width="90"
                                         Height="90"

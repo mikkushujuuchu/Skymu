@@ -1128,9 +1128,9 @@
                             </VisualBrush>
                         </Ellipse.Fill>
                     </Ellipse>
-                    <!--  Loading throbber  for loadimg. TODO make spin  -->
+                    <!--  Loading Spinner  for loadimg. TODO make spin  -->
                     <Grid
-                        x:Name="throbber"
+                        x:Name="Spinner"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Visibility="Collapsed">

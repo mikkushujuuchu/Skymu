@@ -63,7 +63,7 @@
                 Height="371"
                 Stretch="Fill" />
             <Image
-                x:Name="throbber"
+                x:Name="Spinner"
                 Width="128"
                 Height="128"
                 Margin="0,0,0,48"
@@ -129,12 +129,12 @@
                     <StackPanel Grid.Row="0" Width="240">
                         <!--  Protocol box  -->
                         <TextBlock
-                            x:Name="protocolText"
+                            x:Name="ProtocolText"
                             Margin="0,10,0,4"
                             FontWeight="Normal"
                             Text="Messaging service" />
                         <ComboBox
-                            x:Name="comboProtocolBox"
+                            x:Name="ProtocolComboBox"
                             Width="240"
                             Height="21"
                             Margin="0,0,0,6"
@@ -149,7 +149,7 @@
                             FontWeight="Normal"
                             Text="{Binding [sF_USERENTRY_LABEL_USERNAME]}" />
                         <TextBox
-                            x:Name="usernameBox"
+                            x:Name="UsernameBox"
                             Width="240"
                             Height="21"
                             Margin="0,0,0,6" />
@@ -161,12 +161,12 @@
                             FontWeight="Normal"
                             Text="{Binding [sF_USERENTRY_LABEL_PASSWORD]}" />
                         <PasswordBox
-                            x:Name="passwordTokenBox"
+                            x:Name="PasswordTokenBox"
                             Width="240"
                             Height="21"
                             Margin="0,0,0,7" />
                         <TextBlock
-                            x:Name="forgotPasswordLink"
+                            x:Name="ForgotPasswordLink"
                             Height="28"
                             Margin="0,0,0,0"
                             FontWeight="Normal">
@@ -207,7 +207,7 @@
                         Themeable="True" />
                     <!--  Footer panel  -->
                     <Border
-                        x:Name="footerPanel"
+                        x:Name="FooterPanel"
                         Grid.Row="3"
                         Width="270"
                         Height="55"

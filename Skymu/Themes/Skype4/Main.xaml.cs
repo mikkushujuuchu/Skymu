@@ -1223,7 +1223,7 @@ namespace Skymu.Skype4
             );
             SharedServices.SetPlaceholder(MessageTextBox, PlaceholderTextMTB, true);
             if (SendMsgButton != null) SendMsgButton.IsEnabled = SharedServices.CheckIfMessageSendable(MessageTextBox);
-            throbber.Visibility = Visibility.Visible;
+            Spinner.Visibility = Visibility.Visible;
 
             await vmodel.SetConversation();
 
@@ -1231,7 +1231,7 @@ namespace Skymu.Skype4
                 return;
 
             ConversationItemsList.ItemsSource = vmodel.ActiveConversation;
-            throbber.Visibility = Visibility.Collapsed;
+            Spinner.Visibility = Visibility.Collapsed;
             _conversationScrollViewer?.ScrollToEnd();
             RefreshChatSendButton();
         }

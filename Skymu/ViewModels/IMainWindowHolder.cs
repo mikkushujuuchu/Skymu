@@ -11,8 +11,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 /*==========================================================*/
 
-// TODO get the fucking rid of this 
-
 using System;
 using System.Threading.Tasks;
 

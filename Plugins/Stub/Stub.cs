@@ -162,7 +162,7 @@ namespace Stub
             Task.Run(async () =>
             {
                 await Task.Delay(3000);
-                // Make the UI recognize that the message was sent, adding the timestamp and removing the throbber (loading wheel)
+                // Make the UI recognize that the message was sent, adding the timestamp and removing the Spinner (loading wheel)
                 MessageTube?.Invoke(this, new MessageRecievedBottle(identifier,
                     action
                     ? new ActionMessage(identifier, Me, DateTimeOffset.UtcNow.DateTime, text)
