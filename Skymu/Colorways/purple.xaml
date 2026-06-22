@@ -16,7 +16,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <sys:String x:Key="Colorway.Name">Purple</sys:String>
-    <sys:String x:Key="Colorway.Author">Rain</sys:String>
+    <sys:String x:Key="Colorway.Author">mikkushujuuchu</sys:String>
     <sys:String x:Key="Colorway.Description">A purple-accented variant of the default Skype colorway.</sys:String>
     <sys:Int32 x:Key="Colorway.Version">1</sys:Int32>
     <sys:Boolean x:Key="Colorway.IsDarkTheme">false</sys:Boolean>
